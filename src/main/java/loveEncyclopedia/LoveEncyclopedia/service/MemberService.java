@@ -3,14 +3,18 @@ package loveEncyclopedia.LoveEncyclopedia.service;
 import loveEncyclopedia.LoveEncyclopedia.domain.Member;
 import loveEncyclopedia.LoveEncyclopedia.repository.MemberRepository;
 import loveEncyclopedia.LoveEncyclopedia.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
